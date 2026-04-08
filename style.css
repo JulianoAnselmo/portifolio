@@ -227,6 +227,21 @@ body {
   font-size: 0.78rem;
 }
 
+.footer__dev {
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+}
+
+.footer__dev a {
+  color: rgba(255,255,255,0.25);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer__dev a:hover {
+  color: var(--accent-light);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .grid {
