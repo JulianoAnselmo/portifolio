@@ -3,13 +3,13 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0a0a0f;
-  --bg-card: #13131a;
-  --border: #1e1e2a;
+  --bg: #07060b;
   --text: #f0f0f5;
-  --text-muted: #8888a0;
+  --text-muted: rgba(255,255,255,0.4);
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.08);
   --accent: #6366f1;
-  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-light: #a5b4fc;
   --radius: 16px;
 }
 
@@ -19,45 +19,85 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background gradient blobs */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow--1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: -100px;
+  background: rgba(99,102,241,0.12);
+}
+
+.bg-glow--2 {
+  width: 500px;
+  height: 500px;
+  top: 300px;
+  right: -150px;
+  background: rgba(168,85,247,0.08);
+}
+
+.bg-glow--3 {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  left: 30%;
+  background: rgba(236,72,153,0.06);
 }
 
 /* Header */
 .header {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  padding: 5rem 2rem 3rem;
+  padding: 5rem 2rem 2rem;
 }
 
 .header__name {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #fff 0%, #8888a0 100%);
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .header__role {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--text-muted);
   margin-top: 0.5rem;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
 .header__desc {
-  max-width: 520px;
-  margin: 1.25rem auto 0;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 /* Counter */
 .counter {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   gap: 3rem;
-  padding: 0 2rem 3rem;
+  padding: 2.5rem 2rem 3rem;
 }
 
 .counter__item {
@@ -67,40 +107,47 @@ body {
 .counter__number {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--accent);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .counter__label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.35);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   margin-top: 0.25rem;
 }
 
 /* Grid */
 .grid {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 /* Card */
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, box-shadow 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-  border-color: var(--accent);
+  transform: translateY(-8px);
+  border-color: rgba(99,102,241,0.4);
+  box-shadow: 0 20px 60px rgba(99,102,241,0.15), 0 0 0 1px rgba(99,102,241,0.1);
 }
 
 .card__preview {
@@ -108,7 +155,7 @@ body {
   width: 100%;
   aspect-ratio: 16/10;
   overflow: hidden;
-  background: #0d0d14;
+  background: rgba(0,0,0,0.3);
 }
 
 .card__iframe {
@@ -123,11 +170,11 @@ body {
 .card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(10,10,15,0.8) 100%);
+  background: linear-gradient(180deg, transparent 50%, rgba(7,6,11,0.9) 100%);
 }
 
 .card__body {
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 1.25rem 1.25rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,50 +182,49 @@ body {
 }
 
 .card__name {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text);
+  color: #fff;
 }
-
 
 .card__btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1.1rem;
-  background: var(--accent);
-  color: white;
-  font-size: 0.8rem;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  background: rgba(99,102,241,0.15);
+  color: var(--accent-light);
+  font-size: 0.78rem;
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(99,102,241,0.25);
+  transition: all 0.25s ease;
   flex-shrink: 0;
 }
 
 .card__btn:hover {
-  background: #4f46e5;
-  box-shadow: 0 4px 16px var(--accent-glow);
+  background: rgba(99,102,241,0.3);
+  border-color: rgba(99,102,241,0.5);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.2);
 }
 
 .card__btn svg {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
 }
 
 /* Footer */
 .footer {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 2rem;
-  border-top: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-
-.footer a {
-  color: var(--accent);
-  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.3);
+  font-size: 0.78rem;
 }
 
 /* Responsive */
@@ -190,20 +236,30 @@ body {
 
 @media (max-width: 580px) {
   .header {
-    padding: 3rem 1.25rem 2rem;
+    padding: 3rem 1.25rem 1.5rem;
   }
 
   .header__name {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .header__desc {
+    font-size: 0.85rem;
   }
 
   .counter {
     gap: 2rem;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .counter__number {
+    font-size: 1.6rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
     padding: 0 1.25rem 3rem;
+    gap: 1rem;
   }
 
   .card__body {
