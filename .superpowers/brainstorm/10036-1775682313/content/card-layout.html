@@ -1,0 +1,130 @@
+<h2>Como mostrar os projetos?</h2>
+<p class="subtitle">Layout dos cards com o estilo Glass & Gradients</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="grid-uniform" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg, #0f0c29, #302b63, #24243e); padding:24px; min-height:280px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-20px; right:-20px; width:120px; height:120px; background:rgba(99,102,241,0.2); border-radius:50%; filter:blur(40px);"></div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:10px;">
+            <div style="font-size:11px; font-weight:600; color:#fff;">Radix</div>
+            <div style="margin-top:6px; background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px; display:inline-block;">Ver Site</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:10px;">
+            <div style="font-size:11px; font-weight:600; color:#fff;">Recanto</div>
+            <div style="margin-top:6px; background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px; display:inline-block;">Ver Site</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:10px;">
+            <div style="font-size:11px; font-weight:600; color:#fff;">Canada</div>
+            <div style="margin-top:6px; background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px; display:inline-block;">Ver Site</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:10px;">
+        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:10px;">
+            <div style="font-size:11px; font-weight:600; color:#fff;">Benja</div>
+            <div style="margin-top:6px; background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px; display:inline-block;">Ver Site</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:10px;">
+            <div style="font-size:11px; font-weight:600; color:#fff;">Marieta</div>
+            <div style="margin-top:6px; background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px; display:inline-block;">Ver Site</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:10px;">
+            <div style="font-size:11px; font-weight:600; color:#fff;">Cave Gym</div>
+            <div style="margin-top:6px; background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px; display:inline-block;">Ver Site</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Grid Uniforme</h3>
+      <p>3 colunas iguais no desktop, 2 no tablet, 1 no mobile. Limpo e organizado. Todos os projetos com o mesmo peso visual. Similar ao atual mas com glass.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="featured-grid" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg, #0f0c29, #302b63, #24243e); padding:24px; min-height:280px; position:relative; overflow:hidden;">
+      <div style="position:absolute; bottom:-20px; left:-20px; width:100px; height:100px; background:rgba(168,85,247,0.2); border-radius:50%; filter:blur(35px);"></div>
+      <!-- Featured large card -->
+      <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden; margin-bottom:10px;">
+        <div style="aspect-ratio:21/9; background:rgba(0,0,0,0.3);"></div>
+        <div style="padding:10px; display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <div style="font-size:13px; font-weight:700; color:#fff;">Radix</div>
+            <div style="font-size:9px; color:rgba(255,255,255,0.4); margin-top:2px;">Projeto em destaque</div>
+          </div>
+          <div style="background:rgba(99,102,241,0.8); color:#fff; font-size:8px; padding:3px 8px; border-radius:4px;">Ver Site</div>
+        </div>
+      </div>
+      <!-- Smaller cards -->
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; border:1px solid rgba(255,255,255,0.08); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:6px 8px;"><div style="font-size:9px; font-weight:600; color:#fff;">Recanto</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; border:1px solid rgba(255,255,255,0.08); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:6px 8px;"><div style="font-size:9px; font-weight:600; color:#fff;">Canada</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; border:1px solid rgba(255,255,255,0.08); overflow:hidden;">
+          <div style="aspect-ratio:16/10; background:rgba(0,0,0,0.3);"></div>
+          <div style="padding:6px 8px;"><div style="font-size:9px; font-weight:600; color:#fff;">Benja</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Destaque + Grid</h3>
+      <p>O projeto mais recente aparece grande no topo (full-width). Os demais ficam em grid 3 colunas abaixo. Dá hierarquia visual e destaca o trabalho mais novo.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="masonry" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg, #0f0c29, #302b63, #24243e); padding:24px; min-height:280px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:40px; left:50%; width:100px; height:100px; background:rgba(236,72,153,0.15); border-radius:50%; filter:blur(35px);"></div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div>
+          <div style="background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden; margin-bottom:10px;">
+            <div style="aspect-ratio:16/12; background:rgba(0,0,0,0.3);"></div>
+            <div style="padding:8px;"><div style="font-size:10px; font-weight:600; color:#fff;">Radix</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+            <div style="aspect-ratio:16/9; background:rgba(0,0,0,0.3);"></div>
+            <div style="padding:8px;"><div style="font-size:10px; font-weight:600; color:#fff;">Benja</div></div>
+          </div>
+        </div>
+        <div>
+          <div style="background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden; margin-bottom:10px;">
+            <div style="aspect-ratio:16/9; background:rgba(0,0,0,0.3);"></div>
+            <div style="padding:8px;"><div style="font-size:10px; font-weight:600; color:#fff;">Recanto</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border-radius:12px; border:1px solid rgba(255,255,255,0.1); overflow:hidden;">
+            <div style="aspect-ratio:16/14; background:rgba(0,0,0,0.3);"></div>
+            <div style="padding:8px;"><div style="font-size:10px; font-weight:600; color:#fff;">Canada</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Masonry</h3>
+      <p>Cards com alturas variadas em 2 colunas, estilo Pinterest/Dribbble. Visual mais orgânico e artístico. Funciona bem com previews de proporções diferentes.</p>
+    </div>
+  </div>
+
+</div>

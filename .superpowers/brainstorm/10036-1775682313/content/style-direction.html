@@ -1,0 +1,73 @@
+<h2>Qual direção visual para o portfólio?</h2>
+<p class="subtitle">Escolha o estilo que mais combina com a imagem que você quer passar</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="minimal" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0a0a0f; padding:24px; min-height:220px;">
+      <!-- Minimal Dark -->
+      <div style="text-align:center; margin-bottom:16px;">
+        <div style="font-size:22px; font-weight:700; color:#fff; letter-spacing:-0.02em;">Juliano Anselmo</div>
+        <div style="font-size:11px; color:#666; text-transform:uppercase; letter-spacing:0.15em; margin-top:4px;">Desenvolvedor Web</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="background:#111118; border-radius:8px; aspect-ratio:16/10; border:1px solid #1a1a24;"></div>
+        <div style="background:#111118; border-radius:8px; aspect-ratio:16/10; border:1px solid #1a1a24;"></div>
+        <div style="background:#111118; border-radius:8px; aspect-ratio:16/10; border:1px solid #1a1a24;"></div>
+        <div style="background:#111118; border-radius:8px; aspect-ratio:16/10; border:1px solid #1a1a24;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Minimal Dark</h3>
+      <p>Ultra-limpo, sem distrações. Foco total nos projetos com bastante espaço em branco (escuro). Tipografia forte, poucos elementos decorativos. Referência: portfólios de designers de produto.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="glassmorphism" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg, #0f0c29, #302b63, #24243e); padding:24px; min-height:220px;">
+      <!-- Glassmorphism -->
+      <div style="text-align:center; margin-bottom:16px;">
+        <div style="font-size:22px; font-weight:700; color:#fff;">Juliano Anselmo</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.15em; margin-top:4px;">Desenvolvedor Web</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="background:rgba(255,255,255,0.08); backdrop-filter:blur(10px); border-radius:12px; aspect-ratio:16/10; border:1px solid rgba(255,255,255,0.12);"></div>
+        <div style="background:rgba(255,255,255,0.08); backdrop-filter:blur(10px); border-radius:12px; aspect-ratio:16/10; border:1px solid rgba(255,255,255,0.12);"></div>
+        <div style="background:rgba(255,255,255,0.08); backdrop-filter:blur(10px); border-radius:12px; aspect-ratio:16/10; border:1px solid rgba(255,255,255,0.12);"></div>
+        <div style="background:rgba(255,255,255,0.08); backdrop-filter:blur(10px); border-radius:12px; aspect-ratio:16/10; border:1px solid rgba(255,255,255,0.12);"></div>
+      </div>
+      <!-- Decorative gradient blobs -->
+      <div style="position:absolute; top:20px; right:30px; width:80px; height:80px; background:rgba(99,102,241,0.3); border-radius:50%; filter:blur(30px);"></div>
+      <div style="position:absolute; bottom:30px; left:20px; width:60px; height:60px; background:rgba(168,85,247,0.25); border-radius:50%; filter:blur(25px);"></div>
+    </div>
+    <div class="card-body">
+      <h3>B — Glass & Gradients</h3>
+      <p>Cards com efeito vidro (glassmorphism), gradientes sutis no fundo, blur e transparências. Visual sofisticado e moderno. Referência: Apple, Linear, Vercel.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="bento" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#09090b; padding:24px; min-height:220px;">
+      <!-- Bento Grid -->
+      <div style="text-align:center; margin-bottom:16px;">
+        <div style="font-size:22px; font-weight:700; color:#fff;">Juliano Anselmo</div>
+        <div style="font-size:11px; color:#666; text-transform:uppercase; letter-spacing:0.15em; margin-top:4px;">Desenvolvedor Web</div>
+      </div>
+      <div style="display:grid; grid-template-columns:2fr 1fr; grid-template-rows:auto auto; gap:8px;">
+        <div style="background:#141418; border-radius:12px; aspect-ratio:16/9; border:1px solid #222; grid-row:span 2;"></div>
+        <div style="background:#141418; border-radius:12px; min-height:50px; border:1px solid #222;"></div>
+        <div style="background:#141418; border-radius:12px; min-height:50px; border:1px solid #222;"></div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:8px;">
+        <div style="background:#141418; border-radius:12px; min-height:40px; border:1px solid #222;"></div>
+        <div style="background:#141418; border-radius:12px; min-height:40px; border:1px solid #222;"></div>
+        <div style="background:#141418; border-radius:12px; min-height:40px; border:1px solid #222;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Bento Grid</h3>
+      <p>Grid assimétrico estilo "bento box" com cards de tamanhos variados. Projetos em destaque ficam maiores. Layout dinâmico e visualmente interessante. Referência: GitHub profile, Apple.</p>
+    </div>
+  </div>
+
+</div>
