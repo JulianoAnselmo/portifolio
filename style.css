@@ -63,6 +63,37 @@ body {
   padding: 5rem 2rem 2rem;
 }
 
+.header__contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.1));
+  border: 1px solid rgba(99,102,241,0.3);
+  border-radius: 50px;
+  color: var(--accent-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header__contact:hover {
+  background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(168,85,247,0.2));
+  border-color: rgba(99,102,241,0.5);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+  transform: translateY(-2px);
+}
+
+.header__contact svg {
+  width: 18px;
+  height: 18px;
+}
+
 .header__name {
   font-size: 3rem;
   font-weight: 800;
@@ -252,6 +283,17 @@ body {
 @media (max-width: 580px) {
   .header {
     padding: 3rem 1.25rem 1.5rem;
+  }
+
+  .header__contact {
+    font-size: 0.8rem;
+    padding: 0.6rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .header__contact svg {
+    width: 16px;
+    height: 16px;
   }
 
   .header__name {
